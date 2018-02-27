@@ -32,7 +32,23 @@ exports.update_a_user = function (req, res) {
 };
 
 exports.login = function (req, res) {
+<<<<<<< HEAD
   // find the user by mail and password
   // check mail and password equals to received data
   // return user _id
+=======
+  Users.find({ email: req.body.email, password: req.body.password }, (err, userArr) => {
+    if (userArr.length != 1) {
+      res.status(401);
+      res.send("Not found");
+    }
+    else if (userArr[0]['email'] != req.body.email || userArr[0]['password'] != req.body.password) {
+      res.status(401);
+      res.send("Usuari o password incorrectes");
+    }
+    else {
+      res.send(userArr[0]['_id']);
+    }
+  });
+>>>>>>> c10dd048565bcd231fd0cdccf611a2ddc039bb5c
 };
