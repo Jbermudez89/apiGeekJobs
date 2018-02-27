@@ -15,7 +15,7 @@ const UsersSchema = new Schema({
     type: String,
     required: 'nombre del usuario'
   },
-  apellido: {
+  apellidos: {
     type: String,
     required: 'apellido del usuario'
   },
@@ -43,7 +43,7 @@ const UsersSchema = new Schema({
   fotoPerfil: {
     type: String,
   },
-  fotoCabecera: {
+  fotoPortada: {
     type: String,
   },
   portafolio: {
@@ -54,6 +54,7 @@ const UsersSchema = new Schema({
     required: 'descripcion del usuario'
   }
 
+  
 });
 
 module.exports = mongoose.model('Users', UsersSchema);
