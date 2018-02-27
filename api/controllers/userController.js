@@ -33,6 +33,6 @@ exports.update_a_user = function (req, res) {
 
 exports.login = function (req, res) {
   // find the user by mail and password
-  // check mail and password erquals to received data
+  // check mail and password equals to received data
   // return user _id
 };

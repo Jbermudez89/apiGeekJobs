@@ -5,32 +5,55 @@ const Schema = mongoose.Schema;
 const UsersSchema = new Schema({
   email:{
     type: String,
-    required: 'Email'
+    required: 'email del usuario'
   },
   password:{
     type: String,
-    required: 'Password'
+    required: 'password del usuario'
   },
   nombre: {
     type: String,
-    required: 'Nombre del usuario'
+    required: 'nombre del usuario'
   },
   apellido: {
     type: String,
-    required: 'Apellido del usuario'
+    required: 'apellido del usuario'
   },
   telefono: {
     type: String,
-    required: 'Teléfono del usario'
+    required: 'telefono del usuario'
   },
-  habilidad:{
+  habilidades:{
     type: String,
-    required: 'Habilidad del usuario'
+    required: 'habilidades del usuario'
   },
-  hobby: {
+  confirmacionpass: {
     type: String,
-    required: 'Hobby del usuario'
+    required: 'confirmacionpass del usuario'
+  },
+  habilidadesPrincipales: {
+    type: String,
+  },
+  formacion: {
+    type: String,
+  },
+  experiencia: {
+    type: String,
+  },
+  fotoPerfil: {
+    type: String,
+  },
+  fotoCabecera: {
+    type: String,
+  },
+  portafolio: {
+    type: String,
+  },
+  descripcion: {
+    type: String,
+    required: 'descripcion del usuario'
   }
+
 });
 
 module.exports = mongoose.model('Users', UsersSchema);

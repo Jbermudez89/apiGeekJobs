@@ -8,7 +8,7 @@ module.exports = function(app) {
     .put(userController.update_a_user);
 
 
-  app.route('/usuario/registro')
+  app.route('/registro')
     .post(userController.create_a_user);
     
   app.route('/usuario/login')
