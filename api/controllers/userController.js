@@ -32,12 +32,18 @@ exports.update_a_user = function (req, res) {
 };
 
 exports.login = function (req, res) {
-  Users.find({ email: req.body.email, password: req.body.password }, (err, userArr) => {
+  console.log(req.body);
+  console.log(req.body.email_geek);
+  console.log(req.body.password_geek);
+
+  
+  Users.find({ email: req.body.email_geek, password: req.body.password_geek }, (err, userArr) => {
+    console.log('respuesta Login:',err, userArr);
     if (userArr.length != 1) {
       res.status(401);
       res.send("Not found");
     }
-    else if (userArr[0]['email'] != req.body.email || userArr[0]['password'] != req.body.password) {
+    else if (userArr[0]['email'] != req.body.email_geek || userArr[0]['password'] != req.body.password_geek) {
       res.status(401);
       res.send("Usuari o password incorrectes");
     }
