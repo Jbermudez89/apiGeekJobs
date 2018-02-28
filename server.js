@@ -3,6 +3,7 @@ const express = require('express'),
   port = process.env.PORT || 8080,
   mongoose = require('mongoose'), 
   Users = require('./api/models/userModel'),
+  Empresas = require('./api/models/empresaModel'),
   cors = require('cors'), 
   bodyParser = require('body-parser');
 
@@ -14,8 +15,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
-const routes = require('./api/routes/userRoutes'); //importing route
-routes(app); //register the route
+const routesUser = require('./api/routes/userRoutes'); //importing route
+const routesEmp = require('./api/routes/empresaRoutes'); //importing route
+routesUser(app); //register the route
+routesEmp(app); //register the route
 
 app.options('*',cors());
 app.listen(port);
