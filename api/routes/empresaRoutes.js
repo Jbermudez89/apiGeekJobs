@@ -7,5 +7,5 @@ module.exports = function (app) {
     .post(empresaController.create_a_company);
 
   app.route('/empresa/login')
-    .post(empresaController.login);
+    .post(empresaController.login_emp);
 };

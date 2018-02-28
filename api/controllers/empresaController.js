@@ -3,7 +3,9 @@ const mongoose = require('mongoose'),
   Empresas = mongoose.model('Empresas');
 
 exports.create_a_company = function (req, res) {
+  console.log(req,res);
   let new_company = new Empresas(req.body);
+  console.log(req.body);
   new_company.save((err, emp) => {
     if (err)
       res.send(err);
@@ -11,7 +13,7 @@ exports.create_a_company = function (req, res) {
   });
 };
 
-exports.login = function (req, res) {
+exports.login_emp = function (req, res) {
   console.log(req.body);
   console.log(req.body.email_emp);
   console.log(req.body.password_emp);

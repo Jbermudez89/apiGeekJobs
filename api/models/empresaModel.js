@@ -3,39 +3,39 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const EmpresaSchema = new Schema({
-  email:{
+  email_emp:{
     type: String,
     required: 'email empresa'
   },
-  password:{
+  password_emp:{
     type: String,
     required: 'password empresa'
   },
-  nombre: {
+  nombre_emp: {
     type: String,
     required: 'nombre empresa'
   },
-  apellido: {
+  apellido_emp: {
     type: String,
     required: 'apellido empresa'
   },
-  cpassword: {
+  cpassword_emp: {
     type: String,
     required: 'confirmacion password empresa'
   },
-  empresa:{
+  empresa_emp:{
     type:String,
     required: 'nombre empresa'
   },
-  nif:{
+  nif_emp:{
       type: String,
       required: 'nif empresa'
   },
-  telefono: {
+  telefono_emp: {
     type: String,
-    required: 'telefono del usuario'
+    required: 'telefono empresa'
   },
-  stack:{
+  stack_emp:{
     type: String
   }
 });
