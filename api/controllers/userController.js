@@ -3,7 +3,7 @@ const mongoose = require('mongoose'),
   Users = mongoose.model('Users');
 
 exports.create_a_user = function (req, res) {
-  let new_user = new Users(req.body);
+  let new_user = new Users (req.body);
   new_user.save((err, user) => {
     if (err)
       res.send(err);
